@@ -125,7 +125,7 @@ export default class Args {
 		}
 
 		if (typeof conf.default !== 'undefined') {
-			params[conf.name] = conf.default;
+			this.params[conf.name] = conf.default;
 			if (conf.required) {
 				this.#reqGiven++;
 				this.#allRequired = this.#allRequired.filter(v => v !== (conf.value || conf.name));
